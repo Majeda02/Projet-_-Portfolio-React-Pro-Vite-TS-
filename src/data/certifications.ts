@@ -39,7 +39,7 @@ export const certifications: Certification[] = [
     issueDate: "2025-11",
     skills: ["State & Hooks , Composants React , Routing, API & Intégration"],
     tags: ["Kubernetes","DevOps"],
-    image: "/src/assets/Hibernate.png",
+    image: "/src/assets/React.png",
     imageAlt: "Certificat Hibernate",
     status: "active"
   }

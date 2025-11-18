@@ -39,6 +39,10 @@ export default function Contact() {
               {profile.email}
             </a>
           </p>
+           <p className="flex items-center gap-2">
+            <strong className="text-foreground">Téléphone :</strong> 
+            <span className="text-muted-foreground">{profile.Phone}</span>
+          </p>
         </div>
 
         <div className="space-y-2">
