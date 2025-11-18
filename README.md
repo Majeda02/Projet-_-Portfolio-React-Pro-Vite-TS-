@@ -27,6 +27,7 @@ Ce portfolio est développé avec React 18, Vite, TypeScript, Tailwind CSS, shad
 <img width="1317" height="850" alt="image" src="https://github.com/user-attachments/assets/1262c71e-870b-4891-821a-24a29972853f" />
 
 #### Page Certifications
+<img width="1265" height="826" alt="image" src="https://github.com/user-attachments/assets/140e70b8-ac5d-4f24-bbf8-e669574b3963" />
 
 #### Page Contact
 <img width="1308" height="892" alt="image" src="https://github.com/user-attachments/assets/5a67b46e-0ab9-4ec7-a007-1c941176fe98" />
