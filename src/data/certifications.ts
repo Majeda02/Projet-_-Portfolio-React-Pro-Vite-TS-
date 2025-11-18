@@ -19,7 +19,7 @@ export const certifications: Certification[] = [
     issueDate: "2025-09",
     skills: ["JDK, Les notions de base","JDBC , Modélisation en POO"],
     tags: ["Cloud","DevOps"],
-    image: "/src/assets/JAVA1.png",
+    image: "/assets/JAVA1.png",
     imageAlt: "Certificat Java",
     status: "active"
   },
@@ -29,7 +29,7 @@ export const certifications: Certification[] = [
     issueDate: "2025-10",
     skills: ["Java 17+, Maven, H2/MySQL, JUnit/Testcontainers"],
     tags: ["Kubernetes","DevOps"],
-    image: "/src/assets/Hibernate.png",
+    image: "/assets/Hibernate.png",
     imageAlt: "Certificat Hibernate",
     status: "active"
   },
@@ -39,7 +39,7 @@ export const certifications: Certification[] = [
     issueDate: "2025-11",
     skills: ["State & Hooks , Composants React , Routing, API & Intégration"],
     tags: ["Kubernetes","DevOps"],
-    image: "/src/assets/React.png",
+    image: "/assets/React.png",
     imageAlt: "Certificat Hibernate",
     status: "active"
   }

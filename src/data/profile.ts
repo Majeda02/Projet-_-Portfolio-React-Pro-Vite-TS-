@@ -6,7 +6,7 @@ export const profile = {
   location: "Marrakech, Maroc",
   email: "benlaghfirimajeda@gmail.com",
   Phone: "06 24 09 59 89",
-  avatar: "/src/assets/Majeda3.jpeg",
+  avatar: "/assets/Majeda3.jpeg",
   description:
     "",
 
