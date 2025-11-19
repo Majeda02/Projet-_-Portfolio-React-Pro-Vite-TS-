@@ -1,5 +1,8 @@
 ### "# Projet-_-Portfolio-React-Pro-Vite-TS-" 
 
+#### Lien Vercel de mon portfolio
+https://projet-portfolio-react-pro-vite-ts.vercel.app/
+
 ####  Portfolio Personnel - BEN-LAGHFIRI Majeda
 Ce portfolio présente mon parcours académique et professionnel en tant qu'étudiante en Master en Technologies émergentes. Il met en valeur mes compétences en développement web, intelligence artificielle, et technologies modernes.
 
@@ -36,8 +39,7 @@ Ce portfolio est développé avec React 18, Vite, TypeScript, Tailwind CSS, shad
 
 https://github.com/user-attachments/assets/a5b636cc-2578-4172-aa9f-dd7eb8fa2935
 
-#### Lien Vercel de mon portfolio
-https://projet-portfolio-react-pro-vite-ts.vercel.app/
+
 
 
 
