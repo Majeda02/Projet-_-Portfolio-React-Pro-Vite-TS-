@@ -23,10 +23,8 @@ Ce portfolio est développé avec React 18, Vite, TypeScript, Tailwind CSS, shad
 <img width="1321" height="91" alt="image" src="https://github.com/user-attachments/assets/950e3cc5-8bcf-4ab3-ba15-e6dd5c563ad1" />
 
 
-
 #### Page Projets
 <img width="1468" height="854" alt="image" src="https://github.com/user-attachments/assets/1413278b-7125-4b8a-a6ee-db46039f3423" />
-
 
 
 #### Page Parcours
@@ -41,6 +39,8 @@ Ce portfolio est développé avec React 18, Vite, TypeScript, Tailwind CSS, shad
 
 
 #### Vidéo 
+https://github.com/user-attachments/assets/4683a48d-a99f-4b57-9a28-c2bd8f1a7122
+
 
 
 
