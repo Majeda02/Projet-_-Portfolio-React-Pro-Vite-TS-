@@ -1,8 +1,18 @@
 import { projects } from "@/data/projects";
-import { Github, ExternalLink } from "lucide-react";
-import { motion } from "framer-motion";
+import { Github, ExternalLink, ChevronDown, ChevronUp } from "lucide-react";
+import { motion, AnimatePresence } from "framer-motion";
+import { useState } from "react";
 
 export default function Projects() {
+  const [expandedDescriptions, setExpandedDescriptions] = useState<{[key: string]: boolean}>({});
+
+  const toggleDescription = (title: string) => {
+    setExpandedDescriptions(prev => ({
+      ...prev,
+      [title]: !prev[title]
+    }));
+  };
+
   return (
     <motion.section 
       initial={{ opacity: 0, y: 20 }}
@@ -40,16 +50,52 @@ export default function Projects() {
                 {p.title}
               </h3>
               
-              <p className="text-gray-600 text-sm mb-4 flex-1">
-                {p.summary}
+              <div className="text-gray-600 text-sm mb-4 flex-1">
+                <p>{p.summary}</p>
                 {p.description && (
-                  <span className="block mt-2 text-gray-500">
-                    {p.description.length > 150 
-                      ? `${p.description.substring(0, 150)}...` 
-                      : p.description}
-                  </span>
+                  <div className="mt-2">
+                    <AnimatePresence initial={false}>
+                      <motion.div
+                        key={p.title}
+                        initial={{ height: 0, opacity: 0 }}
+                        animate={{ 
+                          height: expandedDescriptions[p.title] ? 'auto' : '4.5em',
+                          opacity: 1
+                        }}
+                        exit={{ height: 0, opacity: 0 }}
+                        transition={{ duration: 0.3 }}
+                        className="overflow-hidden relative"
+                      >
+                        <p className="text-gray-500">
+                          {p.description}
+                        </p>
+                        {!expandedDescriptions[p.title] && (
+                          <div className="absolute bottom-0 left-0 right-0 h-8 bg-gradient-to-t from-white to-transparent" />
+                        )}
+                      </motion.div>
+                    </AnimatePresence>
+                    
+                    {p.description.length > 150 && (
+                      <button
+                        onClick={() => toggleDescription(p.title)}
+                        className="text-blue-600 hover:text-blue-800 text-sm font-medium mt-1 flex items-center transition-colors"
+                      >
+                        {expandedDescriptions[p.title] ? (
+                          <>
+                            <span>Voir moins</span>
+                            <ChevronUp className="w-4 h-4 ml-1" />
+                          </>
+                        ) : (
+                          <>
+                            <span>Lire plus</span>
+                            <ChevronDown className="w-4 h-4 ml-1" />
+                          </>
+                        )}
+                      </button>
+                    )}
+                  </div>
                 )}
-              </p>
+              </div>
               
               <div className="flex flex-wrap gap-2 mb-4">
                 {p.tags.map(tag => (
