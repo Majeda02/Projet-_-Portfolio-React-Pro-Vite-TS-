@@ -18,26 +18,33 @@ Ce portfolio est développé avec React 18, Vite, TypeScript, Tailwind CSS, shad
 * Construire et déployer sur Vercel (CI sur push GitHub).
 
 #### Page Accueil
-<img width="1395" height="833" alt="image" src="https://github.com/user-attachments/assets/6724dfcd-a035-40c2-9c13-64f139683d45" />
+<img width="1314" height="894" alt="image" src="https://github.com/user-attachments/assets/6424d3c1-3d9f-4a8d-81b6-6cad1e0b539e" />
+<img width="1322" height="683" alt="image" src="https://github.com/user-attachments/assets/a8203b57-1b12-4d75-acd3-6164ed9c4582" />
+<img width="1321" height="91" alt="image" src="https://github.com/user-attachments/assets/950e3cc5-8bcf-4ab3-ba15-e6dd5c563ad1" />
+
+
 
 #### Page Projets
-<img width="1311" height="897" alt="image" src="https://github.com/user-attachments/assets/69c56151-c9f8-4178-b47f-62d12a221d99" />
+<img width="1342" height="883" alt="image" src="https://github.com/user-attachments/assets/9f79e277-3e5b-4621-b07f-3242582625bd" />
+
 
 #### Page Parcours
 <img width="1329" height="888" alt="image" src="https://github.com/user-attachments/assets/2cfb938f-de7d-4215-acf7-e4e9b93eb7ca" />
 
 #### Page Parcours
-<img width="1317" height="850" alt="image" src="https://github.com/user-attachments/assets/1262c71e-870b-4891-821a-24a29972853f" />
+<img width="1325" height="881" alt="image" src="https://github.com/user-attachments/assets/25d55796-f4fb-40cf-8af8-9e22b1313849" />
+
 
 #### Page Certifications
-<img width="1265" height="826" alt="image" src="https://github.com/user-attachments/assets/140e70b8-ac5d-4f24-bbf8-e669574b3963" />
+<img width="1278" height="891" alt="image" src="https://github.com/user-attachments/assets/0970d34a-ab1e-42f8-a740-394f92b9353a" />
 
 #### Page Contact
-<img width="1308" height="892" alt="image" src="https://github.com/user-attachments/assets/5a67b46e-0ab9-4ec7-a007-1c941176fe98" />
+<img width="1296" height="858" alt="image" src="https://github.com/user-attachments/assets/7e8ee43d-a7af-41db-8e56-59e12ebc6194" />
+
 
 #### Vidéo 
 
-https://github.com/user-attachments/assets/a5b636cc-2578-4172-aa9f-dd7eb8fa2935
+
 
 
 
