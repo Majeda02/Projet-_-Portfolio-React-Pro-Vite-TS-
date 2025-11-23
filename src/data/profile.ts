@@ -6,9 +6,9 @@ export const profile = {
   location: "Marrakech, Maroc",
   email: "benlaghfirimajeda@gmail.com",
   Phone: "06 24 09 59 89",
-  avatar: "/assets/Majeda3.jpeg",
+  avatar: "/assets/MajedaIA3.jpeg",
   description:
-    "",
+    "Développeuse passionnée par les technologies émergentes, je me spécialise dans le développement web, mobile et les réalités augmentée et virtuelle. Toujours à la recherche de nouveaux défis pour mettre en pratique mes compétences et développer de nouvelles expertises.",
 
   socials: [
     { label: "GitHub", href: "https://github.com/Majeda02" },
@@ -18,8 +18,37 @@ export const profile = {
     }
   ],
 
-  about: "IA, JEE, AR, VR, Android, PL/SQL, BI.",
-  skills: [ 
-  "Html, css, Laravel, Python, PHP, Java, Spring Boot, JakartaEE, SQL, MySQL, SQL Developper, Node.js, React.js, TypeScript, JavaScript, Android, REST API, Docker, Microservices, AR, VR, Unity"
-],
+  about: "Développeuse Full-Stack & Réalités Immersives",
+  skills: [
+    {
+      category: "Frontend",
+      icon: "Monitor",
+      items: ["HTML5", "CSS3", "JavaScript", "TypeScript", "React.js", "Tailwind CSS"]
+    },
+    {
+      category: "Backend",
+      icon: "Server",
+      items: ["Java", "Spring Boot", "Node.js", "PHP", "Laravel", "REST API"]
+    },
+    {
+      category: "Bases de Données",
+      icon: "Database",
+      items: ["SQL", "MySQL", "PL/SQL", "SQL Developer", "MongoDB"]
+    },
+    {
+      category: "Réalité Virtuelle & Augmentée",
+      icon: "Globe",
+      items: ["Unity", "Vuforia", "C#", "3D Modeling"]
+    },
+    {
+      category: "Outils & DevOps",
+      icon: "Settings",
+      items: ["Docker", "Git", "GitHub", "VS Code", "IntelliJ IDEA"]
+    },
+    {
+      category: "Mobile",
+      icon: "Smartphone",
+      items: ["Android", "React Native", "Kotlin"]
+    }
+  ],
 };

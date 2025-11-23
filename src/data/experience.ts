@@ -6,7 +6,9 @@ export type Experience = {
   location?: string;
   start: string;
   end?: string;
-  description?: string[];
+  description: string[];
+  logo?: string;
+  technologies?: string[];
 };
 
 export const experience: Experience[] = [
@@ -40,8 +42,8 @@ export const experience: Experience[] = [
     title: "Action Educative",
     company: "Lycée Salah Eddine El Ayoubi  ",
     location: "Marrakech",
-    start: "2023-11",
-    end: "2024-07",
+    start: "2023-03",
+    end: "2023-07",
     description: [
       "Enregistrement des absences et suivi administratif via le service MASSAR",
       "Gestion des notes et mise à jour des informations académiques sur MASSAR"

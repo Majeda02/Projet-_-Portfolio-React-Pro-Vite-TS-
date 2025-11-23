@@ -1,65 +1,147 @@
 import { education } from "@/data/education";
-function fmt(s?: string){ if(!s) return "Présent"; const [y,m]=s.split("-"); return `${m}/${y}`; }
+import { motion } from "framer-motion";
+import { GraduationCap, MapPin, Calendar, BookOpen, Award } from "lucide-react";
+
+function formatDate(dateStr?: string) { 
+  if (!dateStr) return "En cours"; 
+  const [year, month] = dateStr.split("-"); 
+  const monthNames = ["Janvier", "Février", "Mars", "Avril", "Mai", "Juin",
+    "Juillet", "Août", "Septembre", "Octobre", "Novembre", "Décembre"
+  ];
+  return `${monthNames[parseInt(month) - 1]} ${year}`; 
+}
 
 export default function EducationPage() {
   return (
-    <section className="max-w-6xl mx-auto px-4 md:px-8 py-12 md:py-16 space-y-12 w-full">
+    <motion.section 
+      className="max-w-4xl mx-auto px-4 sm:px-6 py-12 w-full"
+      initial={{ opacity: 0, y: 20 }}
+      animate={{ opacity: 1, y: 0 }}
+      transition={{ duration: 0.5 }}
+    >
       <div className="text-center mb-12">
-        <h2 className="text-4xl md:text-5xl font-bold mb-3">Formations</h2>
-        <div className="w-24 h-1 bg-primary mx-auto rounded-full" />
+        <h2 className="text-4xl font-bold text-gray-900 mb-3">Mon Parcours Académique</h2>
+        <div className="w-20 h-1 bg-blue-600 mx-auto rounded-full mb-6" />
+        <p className="text-gray-600 max-w-2xl mx-auto">
+          Mon parcours éducatif et mes certifications qui ont façonné mes compétences et ma passion pour les technologies émergentes.
+        </p>
       </div>
-      <div className="flex justify-center items-start">
-        <ol className="relative border-l-2 border-primary/30 space-y-8 w-full max-w-5xl pl-8 md:pl-12">
-        {education.map((e, index) => (
-          <li 
-            key={e.school+e.start} 
-            className="relative pb-8 animate-in fade-in slide-in-from-left"
-            style={{ animationDelay: `${index * 150}ms` }}
-          >
-            <span className="absolute -left-[9px] top-2 h-4 w-4 rounded-full bg-primary border-4 border-background shadow-lg" />
-            <div className="bg-card/50 backdrop-blur-sm border border-border rounded-xl p-6 hover:border-primary/50 hover:shadow-lg transition-all duration-300">
-              <h3 className="text-xl font-bold mb-1">
-                {e.degree}{e.field ? ` — ${e.field}` : ""}
-                <span className="text-base font-semibold text-primary ml-2">@ {e.school}</span>
-              </h3>
-              <p className="text-sm text-muted-foreground mb-4 flex flex-wrap items-center gap-2">
-                <span className="inline-flex items-center gap-1">
-                  {fmt(e.start)} — {fmt(e.end)}
-                </span>
-                {e.location && (
-                  <>
-                    <span className="text-border">•</span>
-                    <span>{e.location}</span>
-                  </>
-                )}
-                {e.gpa && (
-                  <>
-                    <span className="text-border">•</span>
-                    <span className="font-semibold text-primary">GPA {e.gpa}</span>
-                  </>
-                )}
-              </p>
-              {e.courses?.length ? (
-                <div className="mt-4 p-3 bg-primary/5 rounded-lg border border-primary/10">
-                  <p className="text-xs font-semibold text-primary mb-2 uppercase tracking-wide">Cours</p>
-                  <p className="text-sm text-muted-foreground">{e.courses.slice(0,5).join(", ")}</p>
+
+      <div className="relative">
+        {/* Ligne de temps */}
+        <div className="absolute left-4 md:left-1/2 h-full w-1 bg-blue-100 -translate-x-1/2"></div>
+        
+        <div className="space-y-12">
+          {education.map((edu, index) => (
+            <motion.div
+              key={edu.school + edu.start}
+              className={`relative ${index % 2 === 0 ? 'md:pr-8' : 'md:pl-8'}`}
+              initial={{ opacity: 0, x: index % 2 === 0 ? -20 : 20 }}
+              animate={{ opacity: 1, x: 0 }}
+              transition={{ duration: 0.5, delay: index * 0.1 }}
+            >
+              <div className={`flex ${index % 2 === 0 ? 'md:flex-row' : 'md:flex-row-reverse'} items-start gap-6`}>
+                {/* Carte de formation */}
+                <div className={`bg-white p-6 rounded-xl shadow-md border border-gray-200 flex-1 ${
+                  index % 2 === 0 ? 'md:ml-12' : 'md:mr-12'
+                }`}>
+                  <div className="flex items-start justify-between mb-4">
+                    <div>
+                      <h3 className="text-xl font-bold text-gray-900">
+                        {edu.degree}
+                        {edu.field && <span className="text-blue-600"> - {edu.field}</span>}
+                      </h3>
+                      <div className="flex items-center text-blue-600 font-medium mt-1">
+                        <GraduationCap className="w-4 h-4 mr-2" />
+                        {edu.school}
+                      </div>
+                    </div>
+                    <div className="w-12 h-12 rounded-full bg-blue-100 flex items-center justify-center">
+                      <BookOpen className="w-6 h-6 text-blue-600" />
+                    </div>
+                  </div>
+                  
+                  <div className="flex flex-col sm:flex-row sm:items-center text-sm text-gray-500 mb-4 gap-2">
+                    <div className="flex items-center">
+                      <Calendar className="w-4 h-4 mr-2" />
+                      {formatDate(edu.start)} - {formatDate(edu.end)}
+                    </div>
+                    {edu.location && (
+                      <div className="flex items-center">
+                        <MapPin className="w-4 h-4 mr-2" />
+                        {edu.location}
+                      </div>
+                    )}
+                    {edu.gpa && (
+                      <div className="flex items-center">
+                        <Award className="w-4 h-4 mr-2 text-yellow-500" />
+                        <span className="font-medium text-gray-700">GPA: {edu.gpa}</span>
+                      </div>
+                    )}
+                  </div>
+                  
+                  {edu.courses && edu.courses.length > 0 && (
+                    <div className="mt-4 p-4 bg-gray-50 rounded-lg">
+                      <h4 className="text-sm font-medium text-gray-700 mb-2">Cours suivis :</h4>
+                      <div className="flex flex-wrap gap-2">
+                        {edu.courses.slice(0, 5).map((course, i) => (
+                          <span 
+                            key={i}
+                            className="px-3 py-1 text-xs bg-white text-gray-700 border border-gray-200 rounded-full"
+                          >
+                            {course}
+                          </span>
+                        ))}
+                        {edu.courses.length > 5 && (
+                          <span className="text-xs text-gray-500 self-center">
+                            +{edu.courses.length - 5} autres
+                          </span>
+                        )}
+                      </div>
+                    </div>
+                  )}
+                  
+                  {edu.highlights && edu.highlights.length > 0 && (
+                    <ul className="space-y-2 mt-4">
+                      {edu.highlights.map((highlight, i) => (
+                        <li key={i} className="flex items-start">
+                          <span className="text-blue-500 mr-2 mt-1">•</span>
+                          <span className="text-gray-600">{highlight}</span>
+                        </li>
+                      ))}
+                    </ul>
+                  )}
                 </div>
-              ) : null}
-              {e.highlights?.length ? (
-                <ul className="list-none space-y-2 mt-4">
-                  {e.highlights.map(h => (
-                    <li key={h} className="flex items-start gap-2 text-sm text-muted-foreground">
-                      <span className="text-primary mt-1.5">▸</span>
-                      <span className="leading-relaxed">{h}</span>
-                    </li>
-                  ))}
-                </ul>
-              ) : null}
-            </div>
-          </li>
-        ))}
-        </ol>
+                
+                {/* Point sur la timeline */}
+                <div className="absolute left-0 md:left-1/2 w-8 h-8 bg-white rounded-full border-4 border-blue-600 -translate-x-1/2 flex items-center justify-center">
+                  <div className="w-2 h-2 bg-blue-600 rounded-full"></div>
+                </div>
+                
+                {/* Date */}
+                <div className={`hidden md:block w-24 text-sm font-medium text-gray-500 mt-1 ${
+                  index % 2 === 0 ? 'md:text-right' : 'md:text-left'
+                }`}>
+                  {formatDate(edu.start)}
+                </div>
+              </div>
+            </motion.div>
+          ))}
+        </div>
       </div>
-    </section>
+      
+      <div className="mt-16 text-center">
+        <h3 className="text-2xl font-bold text-gray-900 mb-4">Compétences acquises</h3>
+        <p className="text-gray-600 max-w-2xl mx-auto mb-6">
+          Mon parcours académique m'a permis d'acquérir des compétences solides en développement, en analyse et en gestion de projet.
+        </p>
+        <a 
+          href="/#skills" 
+          className="inline-flex items-center justify-center rounded-full bg-blue-600 text-white px-8 py-3 font-medium transition-all hover:bg-blue-700 hover:shadow-lg active:scale-95 shadow-md"
+        >
+          Voir mes compétences
+        </a>
+      </div>
+    </motion.section>
   );
 }

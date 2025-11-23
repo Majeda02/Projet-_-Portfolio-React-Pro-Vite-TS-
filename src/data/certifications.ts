@@ -5,6 +5,7 @@ export type Certification = {
   expiryDate?: string;      // "YYYY-MM"
   credentialId?: string;
   credentialUrl?: string;
+  verificationUrl?: string; // Lien pour vérifier la certification
   skills?: string[];
   tags?: string[];
   image?: string;           // "/certs/aws-saa.webp"
@@ -21,7 +22,8 @@ export const certifications: Certification[] = [
     tags: ["Cloud","DevOps"],
     image: "/assets/JAVA1.png",
     imageAlt: "Certificat Java",
-    status: "active"
+    status: "active",
+    verificationUrl: "https://mliaedu.toubkalit.com/verify-certificate/6-48fd079f-753a-4611-a851-ac760b0bd555-912463"
   },
   {
     title: "Hibernate & JPA",
@@ -31,7 +33,8 @@ export const certifications: Certification[] = [
     tags: ["Kubernetes","DevOps"],
     image: "/assets/Hibernate.png",
     imageAlt: "Certificat Hibernate",
-    status: "active"
+    status: "active",
+    verificationUrl: "https://mliaedu.toubkalit.com/verify-certificate/28-48fd079f-753a-4611-a851-ac760b0bd555-068381"
   },
   {
     title: "Développement Front-End moderne avec React",
@@ -40,7 +43,8 @@ export const certifications: Certification[] = [
     skills: ["State & Hooks , Composants React , Routing, API & Intégration"],
     tags: ["Kubernetes","DevOps"],
     image: "/assets/React.png",
-    imageAlt: "Certificat Hibernate",
-    status: "active"
+    imageAlt: "Certificat React",
+    status: "active",
+    verificationUrl: "https://mliaedu.toubkalit.com/verify-certificate/26-48fd079f-753a-4611-a851-ac760b0bd555-840974"
   }
 ];
