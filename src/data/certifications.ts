@@ -10,7 +10,7 @@ export type Certification = {
   tags?: string[];
   image?: string;           // "/certs/aws-saa.webp"
   imageAlt?: string;        // "Badge AWS SAA"
-  status?: "active" | "expired" | "revoked";
+  status: "active" | "expired" | "revoked";
 };
 
 export const certifications: Certification[] = [
