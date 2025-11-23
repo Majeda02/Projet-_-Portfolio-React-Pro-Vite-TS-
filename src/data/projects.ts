@@ -39,7 +39,7 @@ export const projects: Project[] = [
     period: "2025",
     tags: ["VR","C#","Unity "],
     summary: "Conception d'un scénario VR éducatif sur le système solaire",
-    description: "Conception et développement d'une expérience VR éducative permettant d'explorer le système solaire. L'utilisateur peut interagir avec les planètes, les déplacer pour les réorganiser par ordre de distance au soleil, et obtenir des informations sur chacune d'entre elles. J'ai développé ce projet avec Unity et C#, en mettant l'accent sur l'interaction utilisateur et l'aspect pédagogique.",
+    description: "Conception et développement d'une expérience VR éducative permettant d'explorer le système solaire. J'ai développé ce projet avec Unity et C#, en mettant l'accent sur l'interaction utilisateur et l'aspect pédagogique.",
     repo: "https://github.com/Majeda02/Premi-re-manipulation-avec-Unity"
   },
       {
@@ -47,7 +47,7 @@ export const projects: Project[] = [
     period: "2025",
     tags: ["VR","C#","Unity"],
     summary: "Simulation interactive de circuits électriques en réalité virtuelle",
-    description: "Développement d'une application VR éducative permettant de créer et manipuler des circuits électriques simples. Les utilisateurs peuvent connecter des composants (résistances, ampoules, interrupteurs) et observer le comportement du circuit en temps réel. J'ai utilisé Unity et le langage C# pour créer une interface intuitive et réaliste, avec des effets visuels pour illustrer le flux de courant.",
+    description: "Développement d'une application VR éducative permettant de voir  des circuits électriques simples. Les utilisateurs peuvent connecter des composants  et observer le comportement du circuit en temps réel. J'ai utilisé Unity et le langage C# pour créer une interface intuitive et réaliste.",
     repo: "https://github.com/Majeda02/Conception-d-une-sc-ne-Unity-interactive-vis-e-didactique"
   },
      {
@@ -55,7 +55,7 @@ export const projects: Project[] = [
     period: "2025",
     tags: ["AR","C#","Unity","Vuforia"],
     summary: "Application éducative en réalité augmentée pour explorer les monuments historiques",
-    description: "Développement d'une application mobile de réalité augmentée permettant d'afficher des modèles 3D de monuments historiques en superposant des informations éducatives sur le monde réel. L'application utilise Vuforia pour la reconnaissance d'images et la superposition de contenu 3D. J'ai conçu l'interface utilisateur et implémenté les interactions avec les modèles 3D, ainsi que le système d'affichage des informations contextuelles.",
+    description: "Développement d'une application mobile de réalité augmentée permettant d'afficher des  monuments historiques en superposant des informations éducatives sur le monde réel. L'application utilise Vuforia pour la reconnaissance d'images. J'ai conçu l'interface utilisateur et implémenté les interactions avec les Targets, ainsi que le système d'affichage des informations contextuelles.",
     repo: "https://github.com/Majeda02/Lab3_-Introduction-AR-avec-Unity-Vuforia"
   },
      {

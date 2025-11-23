@@ -23,7 +23,7 @@ export const profile = {
     {
       category: "Frontend",
       icon: "Monitor",
-      items: ["HTML5", "CSS3", "JavaScript", "TypeScript", "React.js", "Tailwind CSS"]
+      items: ["HTML", "CSS", "JavaScript", "TypeScript", "React.js", "Tailwind CSS"]
     },
     {
       category: "Backend",
